@@ -47,6 +47,20 @@ public class CustomNetworkManager : NetworkManager
         base.OnServerAddPlayer(netMsg.conn, msg.controllerId);
     }
 
+    public void ChangePlayerPrefab(PlayerController currentPlayer, int prefabIndex)
+    {
+        //Instantiate a new GO where the previous one was
+        GameObject newPlayer = Instantiate(spawnPrefabs[prefabIndex],
+            currentPlayer.gameObject.transform.position,
+            currentPlayer.gameObject.transform.rotation);
+
+        //Destroy the previous player GO
+        NetworkServer.Destroy(currentPlayer.gameObject);
+
+        //replace the connected player GO
+        NetworkServer.ReplacePlayerForConnection(currentPlayer.connectionToClient, newPlayer, 0);
+
+    }
     public string[] playerNames = new string[] { "Boy", "Girl", "Robot" };
 
     private void OnGUI()

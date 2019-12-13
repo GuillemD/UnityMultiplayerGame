@@ -1,7 +1,8 @@
 Win64
 PlayerPath?
-C:/Users/guillemaj/Documents/GitHub/UnityMultiplayerGame/Multiplayer Game Unity/Net Test 3.exe
+C:/Users/guillemdrdv/Documents/GitHub/UnityMultiplayerGame/Multiplayer Game Unity/Net Test 3.exe
 SceneListBegin?
+Assets/Scenes/Menu.unity
 Assets/Scenes/MainScene.unity
 SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
